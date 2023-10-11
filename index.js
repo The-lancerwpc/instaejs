@@ -13,7 +13,9 @@ aap.use(express.static(path.join(__dirname,"public")));
 
 
 
-
+//there are millions of ids on instagram we cant make millions of links for each accounts so created a common link
+//with parameter username
+// request to localhost /ig/cat or /ig/dog
 
 aap.get("/ig/:username",(req,res)=>{
 
