@@ -1,0 +1,28 @@
+
+
+<%- include("includes/htmlheader.ejs") %>
+
+<body>
+    <h2>this page belongs to:<%= data.name %></h2>
+
+    <p>followers :<%= data.followers %></p> <%# comment-to add spaces &nbsp non breaking spaces %>
+    <p>following : <%= data.following %></p>
+    <button>click to see the aap.js functionality</button>
+<!-- to print posts -->
+  <!-- dont use = after ejs syntax in loops -->
+
+<% for(let post of data.posts) { %>
+<img src="<%= post.image %>" alt="someimg">
+<p>likes:
+    <%= post.likes %> 
+    &nbsp; &nbsp;
+     comments:
+     <%= post.comments %>
+</p>
+
+
+<% } %>
+
+<script src="/aap.js"></script>
+</body>
+</html>
